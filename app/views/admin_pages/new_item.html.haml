@@ -1,0 +1,50 @@
+= form_with scope: :admin_page, url: admin_pages_path, local: true do |form|
+  %h1
+    = form.label :alpha
+    = form.text_field :alpha
+  %h1
+    = form.label :code
+    = form.text_field :code
+
+  %h1
+    = form.label :hqr
+    = form.text_field :hqr
+
+  %h1
+    = form.label :total_stock
+    = form.text_field :total_stock
+
+  %h1
+    = form.label :good_stock
+    = form.text_field :good_stock
+
+  %h1
+    = form.label :deposit_stock
+    = form.text_field :deposit_stock
+
+  %h1
+    = form.label :faulty_stock
+    = form.text_field :faulty_stock
+
+  %h1
+    = form.label :rrp_price
+    = form.text_field :rrp_price
+
+  %h1
+    = form.label :our_price
+    = form.text_field :our_price
+
+  %h1
+    = form.label :our_sale_price
+    = form.text_field :our_sale_price
+
+  %h1
+    = form.label :our_lowest_price
+    = form.text_field :our_lowest_price
+
+  %h1
+    = form.label :item_locations
+    = form.text_field :item_locations
+
+  %p
+    = form.submit
