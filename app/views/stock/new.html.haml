@@ -1,4 +1,15 @@
 = form_with scope: :stock, url: stock_index_url, local: true do |form|
+
+  - if @stock.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@stock.errors.count, 'error')
+        prohibited this item from being saved
+      %ul
+        - @stock.errors.full_messages.each do |msg|
+          %li
+            = msg
+
   %h1
     = form.label :alpha
     = form.text_field :alpha

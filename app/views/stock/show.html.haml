@@ -1,1 +1,48 @@
-%p sup
+%h1
+  ALPHA:
+  = @stock.alpha
+%h1
+  CODE:
+  = @stock.code
+
+%h1
+  HQR:
+  = @stock.hqr
+
+%h1
+  TOTAL STOCK:
+  = @stock.total_stock
+
+%h1
+  GOOD STOCK:
+  = @stock.good_stock
+
+%h1
+  DEPOSIT STOCK:
+  = @stock.deposit_stock
+
+%h1
+  FAULTY STOCK:
+  = @stock.faulty_stock
+
+%h1
+  RRP PRICE:
+  = @stock.rrp_price
+
+%h1
+  OUR PRICE:
+  = @stock.our_price
+
+%h1
+  OUR SALE PRICE:
+  = @stock.our_sale_price
+
+%h1
+  OUR LOWEST PRICE:
+  = @stock.our_lowest_price
+
+%h1
+  ITEM LOCATIONS:
+  = @stock.item_locations
+
+= link_to 'Back',stock_index_url

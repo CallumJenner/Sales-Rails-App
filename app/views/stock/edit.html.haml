@@ -1,0 +1,63 @@
+%h1 Edit Item
+
+= form_with model: :stock, url: stock_index_url, local: true do |form|
+
+  - if @stock.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@stock.errors.count, 'error')
+        prohibited this item from being saved
+      %ul
+        - @stock.errors.full_messages.each do |msg|
+          %li
+            = msg
+
+  %h1
+    = form.label :alpha
+    = form.text_field :alpha
+  %h1
+    = form.label :code
+    = form.text_field :code
+
+  %h1
+    = form.label :hqr
+    = form.text_field :hqr
+
+  %h1
+    = form.label :total_stock
+    = form.text_field :total_stock
+
+  %h1
+    = form.label :good_stock
+    = form.text_field :good_stock
+
+  %h1
+    = form.label :deposit_stock
+    = form.text_field :deposit_stock
+
+  %h1
+    = form.label :faulty_stock
+    = form.text_field :faulty_stock
+
+  %h1
+    = form.label :rrp_price
+    = form.text_field :rrp_price
+
+  %h1
+    = form.label :our_price
+    = form.text_field :our_price
+
+  %h1
+    = form.label :our_sale_price
+    = form.text_field :our_sale_price
+
+  %h1
+    = form.label :our_lowest_price
+    = form.text_field :our_lowest_price
+
+  %h1
+    = form.label :item_locations
+    = form.text_field :item_locations
+
+  %p
+    = form.submit
