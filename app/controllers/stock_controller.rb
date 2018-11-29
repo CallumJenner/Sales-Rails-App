@@ -17,6 +17,16 @@ class StockController < ApplicationController
     end
   end
 
+  def update
+    @stock = Stock.find(params[:id])
+
+    if @stock.update(stock_params)
+      redirect_to @stock
+    else
+      render 'edit'
+    end
+  end
+
   def show
     @stock = Stock.find(params[:id])
   end
